@@ -4,7 +4,7 @@ function oddCount(n) {
   //     return Math.floor(n / 2);
   //   }
 
-  if (n % 2 !== 0) return Math.floor(n / 2);
+  return Math.floor(n / 2);
 }
 
 console.log(oddCount(15), 7, "Oops! Wrong.");

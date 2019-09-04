@@ -1,41 +1,21 @@
 function scoreboard(string) {
-  ///split string to array
-  var str = [];
-  var temp = "";
-  for (let i = 0; i < string.length; i++) {
-    if (string[i] === " ") {
-      str.push(temp);
-      temp = "";
-    } else {
-      temp += string[i];
-    }
-  }
-  str.push(temp);
-
-  var scored = [
-    "nil",
-    "one",
-    "two",
-    "three",
-    "four",
-    "five",
-    "six",
-    "seven",
-    "eigth",
-    "nine",
-    "ten"
-  ];
   var result = [];
-  var temp1 = "";
-  for (let i = 0; i < scored.length; i++) {
-    for (let j = 0; j < str.length; j++) {
-      if (str[j] == scored[i]) {
-        result.push(i);
-        temp1 = scored[i];
-      }
-    }
+  var numbers = {
+    nil: 0,
+    one: 1,
+    two: 2,
+    three: 3,
+    four: 4,
+    five: 5,
+    six: 6,
+    seven: 7,
+    eight: 8,
+    nine: 9
+  };
+  var arr = string.split(" ");
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] in numbers) result.push(numbers[arr[i]]);
   }
-  temp1;
   return result;
 }
 console.log(scoreboard("the score is four nil")); // [4,0]

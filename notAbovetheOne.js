@@ -1,7 +1,6 @@
 function binary(arr) {
   var result = [[], []];
   for (let i = 0; i < arr.length; i++) {
-    console.log(arr[i]);
     if (arr[i] === 1 || arr[i] === 0) {
       result[0].push(arr[i]);
     } else {

@@ -1,8 +1,9 @@
 function maps(x) {
   var result = [];
   for (let i = 0; i < x.length; i++) {
-    return result.push(x[i] * 2);
+    result.push(x[i] * 2);
   }
+  return result;
 }
 
 console.log(maps([1, 2, 3]), [2, 4, 6]);

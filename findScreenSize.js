@@ -1,9 +1,9 @@
 function findScreenHeight(width, ratio) {
   //   let parts = ratio.split(":");
-  let parts = [];
+  var parts = [];
   var temp = "";
   for (let i = 0; i < ratio.length; i++) {
-    console.log(ratio[i]);
+    console.log(ratio);
     if (ratio[i] === ":") {
       parts.push(temp);
       temp = "";
@@ -11,15 +11,13 @@ function findScreenHeight(width, ratio) {
       temp += ratio[i];
     }
   }
-  temp;
   parts.push(temp);
-  parts;
-
-  let piece = width / parts[0];
-
-  let height = piece * parts[1];
-
-  return width + "x" + height;
+  //////
+  var result = "";
+  var height = width / parts[0];
+  var ratioHeight = height * parts[1];
+  result += width + "x" + ratioHeight;
+  return result;
 }
 
 console.log(findScreenHeight(1024, "4:3"), "1024x768");

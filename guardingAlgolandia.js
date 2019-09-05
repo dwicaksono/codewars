@@ -1,7 +1,5 @@
 function findNeededGuards(k) {
   // your beatiful code goes here ;)
-  var countTrue = 0;
-  var countfalse = 0;
   var count = 0;
   for (let i = 0; i < k.length - 1; i++) {
     if (k[i] !== true && k[i + 1] !== true) count++;

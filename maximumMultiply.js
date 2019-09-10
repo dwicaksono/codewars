@@ -1,7 +1,8 @@
 function maxMultiple(divisor, bound) {
   //your code here
-  var devide = Math.floor(bound / divisor);
-  return devide * divisor;
+  //   var devide =
+  return Math.floor(bound / divisor) * divisor;
+  //   return devide * divisor;
 }
 
 console.log(maxMultiple(2, 7), 6);

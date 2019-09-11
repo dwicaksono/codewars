@@ -7,7 +7,6 @@ function negationValue(string, value) {
 }
 
 // Basic Test
-
 console.log(negationValue("!", false), true, "Wrong!");
 console.log(negationValue("!", true), false, "Wrong!");
 console.log(negationValue("!!!", []), false, "Wrong!");

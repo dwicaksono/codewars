@@ -36,7 +36,8 @@ decodeMorse = function(morseCode) {
     "--...": 7,
     "---..": 8,
     "----.": 9,
-    "-----": 0
+    "-----": 0,
+    "": " "
   };
 
   //   var arr = [];
@@ -52,23 +53,13 @@ decodeMorse = function(morseCode) {
   //   arr.push(temp);
   //   arr;
 
-  var twoSpace = morseCode.split("   ");
-  twoSpace;
-  console.log(twoSpace);
-
-  var arr = [];
-  var temp = "";
+  var twoSpace = morseCode.split(" ");
+  var temp = [];
   for (let i = 0; i < twoSpace.length; i++) {
-    var dontPush = false;
-    for (let j = 0; j < twoSpace[i].length; j++) {
-      console.log(twoSpace[i][j]);
-      if (twoSpace[i][j] === " ") {
-        delete twoSpace[i][j];
-      }
-    }
+    temp.push(morse[twoSpace[i]]);
   }
+  temp.join();
   temp;
-  arr;
 };
 
 console.log(decodeMorse(".... . -.--   .--- ..- -.. .")); // "HEY JUDE"

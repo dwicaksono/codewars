@@ -19,6 +19,7 @@ function findShort(s) {
       smallest = sArr[i];
     }
   }
+  smallest;
   return smallest.length;
 }
 

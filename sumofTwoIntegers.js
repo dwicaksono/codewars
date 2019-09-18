@@ -1,12 +1,15 @@
 function add(x, y) {
   console.log(x);
   console.log(y);
-  var result = y;
-  var output = 0;
-  for (let i = x; i < x; i++) {
-    output = x;
-  }
-  return output;
+  // var result = y;
+  var output = x + y;
+  // for (let i = 0; i < x; i++) {
+  //   output += x
+  //   // output = x;
+  //   output += y
+  // }
+  output;
+  // return output;
 }
 
 console.log(add(1, 2), 3);

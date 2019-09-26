@@ -11,19 +11,16 @@ function solution(roman) {
     D: 500,
     M: 1000
   };
-  console.log(obj[roman]);
-  console.log(roman);
+
   var arr = roman.split("");
   var count = 0;
   for (let i = 0; i < arr.length; i++) {
-    console.log(arr[0]);
-    console.log(arr[i + 1]);
+    count += obj[arr[i]];
     if (arr[0] === "I" && arr[1] === "V") {
       return obj.IV;
     }
-    count += obj[arr[i]];
   }
-  count;
+  return count;
   //   if (roman !== obj[roman]) {
   //     return count;
   //   }
@@ -33,8 +30,8 @@ function solution(roman) {
 
   // return count;
 }
-// console.log(solution("XXI")); // == 21, 'XXI should == 21')
-// console.log(solution("I")); // == 1, 'I should == 1')
+console.log(solution("XXI")); // == 21, 'XXI should == 21')
+console.log(solution("I")); // == 1, 'I should == 1')
 console.log(solution("IV")); // == 4, 'IV should == 4')
-// console.log(solution("MMVIII")); // == 2008, 'MMVIII should == 2008')
-// console.log(solution("MDCLXVI")); // == 1666, 'MDCLXVI should == 1666')
+console.log(solution("MMVIII")); // == 2008, 'MMVIII should == 2008')
+console.log(solution("MDCLXVI")); // == 1666, 'MDCLXVI should == 1666')

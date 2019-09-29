@@ -1,6 +1,7 @@
 function removeDuplicateWords(s) {
   // your perfect code...
   var arr = s.split(" ");
+  return Array.from(new Set(arr)).join(" ");
 }
 
 console.log(
